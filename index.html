@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
+    <title>Formulario de Compra</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,9 +75,10 @@
 </head>
 <body>
     <div class="contenedor-formulario">
-        <h1>Formulario de Contacto</h1>
-        <p>Completa con tu información y en breve nos pondremos en contacto contigo.</p>
+        <h1>Formulario de Compra</h1>
+        <p>Llena los datos para realizar tu pedido de carne.</p>
         <form action="#" method="post">
+            <!-- Datos personales -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
 
@@ -87,22 +88,29 @@
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
 
-            <label for="pais">País:</label>
-            <select id="pais" name="pais" required>
-                <option value="">Selecciona tu país</option>
-                <option value="mx">México</option>
-                <option value="us">España</option>
-                <option value="es">Estados Unidos</option>
-                <option value="ar">Argentina</option>
-                <option value="co">Brasil</option>
-                <option value="co">Colombia</option>
+            <!-- Detalles de compra -->
+            <label for="tipo_carne">Tipo de Carne:</label>
+            <select id="tipo_carne" name="tipo_carne" required>
+                <option value="">Selecciona el tipo de carne</option>
+                <option value="res">Res</option>
+                <option value="cerdo">Cerdo</option>
+                <option value="pollo">Pollo</option>
+                <option value="cordero">Cordero</option>
             </select>
 
-            <label for="comentarios">Comentarios:</label>
-            <textarea id="comentarios" name="comentarios" placeholder="Escribe tus comentarios o preguntas aquí"></textarea>
+            <label for="cantidad">Cantidad (kg):</label>
+            <input type="number" id="cantidad" name="cantidad" placeholder="Ingresa la cantidad en kilogramos" required>
 
-            <button type="submit">Enviar</button>
+            <label for="fecha_entrega">Fecha de Entrega:</label>
+            <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+
+            <label for="comentarios">Comentarios Adicionales:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Escribe algún detalle adicional o comentario"></textarea>
+
+            <!-- Botón de envío -->
+            <button type="submit">Realizar Pedido</button>
         </form>
     </div>
 </body>
 </html>
+
