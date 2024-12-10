@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e0f7fa; 
+            background-color: #f5e8dc; /* Beige claro */
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,17 +19,18 @@
             width: 90%; 
             max-width: 400px; 
             padding: 20px;
-            background-color: #ffffff;
+            background-color: #fff8f0; /* Fondo beige */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center; 
+            border: 2px solid #a1887f; /* Café suave */
         }
         h1 {
-            color: #00796b; 
+            color: #6d4c41; /* Café oscuro */
             font-size: 24px;
         }
         p {
-            color: #004d40; 
+            color: #5d4037; /* Café intermedio */
             font-size: 14px;
         }
         form {
@@ -40,21 +41,22 @@
         label {
             margin-top: 10px;
             margin-bottom: 5px;
-            color: #004d40; 
+            color: #5d4037; 
             width: 100%; 
             text-align: left; 
         }
-        input, select, textarea, button {
+        input, textarea, button {
             width: 100%; 
             max-width: 360px; 
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #b2dfdb; 
+            border: 1px solid #a1887f; 
             border-radius: 5px;
             font-size: 14px;
+            background-color: #fbe9e7; /* Beige claro */
         }
-        input:focus, select:focus, textarea:focus {
-            border-color: #00796b; 
+        input:focus, textarea:focus {
+            border-color: #6d4c41; 
             outline: none;
         }
         textarea {
@@ -62,14 +64,14 @@
             height: 100px;
         }
         button {
-            background-color: #00796b; 
+            background-color: #8d6e63; /* Café medio */
             color: #fff;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #004d40; 
+            background-color: #5d4037; /* Café más oscuro */
         }
     </style>
 </head>
@@ -89,20 +91,14 @@
             <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
 
             <!-- Detalles de compra -->
-            <label for="tipo_carne">Tipo de Carne:</label>
-            <select id="tipo_carne" name="tipo_carne" required>
-                <option value="">Selecciona el tipo de carne</option>
-                <option value="res">Res</option>
-                <option value="cerdo">Cerdo</option>
-                <option value="pollo">Pollo</option>
-                <option value="cordero">Cordero</option>
-            </select>
+            <label for="tipo_corte">Tipo de Corte:</label>
+            <input type="text" id="tipo_corte" name="tipo_corte" placeholder="Especifica el tipo de corte" required>
 
             <label for="cantidad">Cantidad (kg):</label>
             <input type="number" id="cantidad" name="cantidad" placeholder="Ingresa la cantidad en kilogramos" required>
 
             <label for="fecha_entrega">Fecha de Entrega:</label>
-            <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+            <input type="text" id="fecha_entrega" name="fecha_entrega" placeholder="Escribe la fecha de entrega" required>
 
             <label for="comentarios">Comentarios Adicionales:</label>
             <textarea id="comentarios" name="comentarios" placeholder="Escribe algún detalle adicional o comentario"></textarea>
